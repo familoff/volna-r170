@@ -12,12 +12,11 @@ app = Flask(__name__)
 
 
 @app.route('/', methods=['POST', 'GET'])
-@app.route('/home', methods=['POST', 'GET'])
 def index():
   count = 0
   if request.method == "POST":
     count += 1
-    return render_template('index.html', count=count)
+    return redirect('/', count=count)
   else:
     return render_template('index.html', count=count)
 
