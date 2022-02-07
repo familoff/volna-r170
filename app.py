@@ -14,8 +14,8 @@ app = Flask(__name__)
 count = 0
 @app.route('/', methods=['POST', 'GET'])
 def index():
-  global count
   if request.method == "POST":
+    global count
     count += 1
     return redirect('/')
   else:
