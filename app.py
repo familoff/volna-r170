@@ -11,12 +11,13 @@ app = Flask(__name__)
 #app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 
+count = 0
 @app.route('/', methods=['POST', 'GET'])
 def index():
-  count = 0
+  global count
   if request.method == "POST":
     count += 1
-    return redirect('/', count=count)
+    return render_template('index.html', count=count)
   else:
     return render_template('index.html', count=count)
 
