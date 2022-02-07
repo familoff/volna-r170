@@ -17,7 +17,7 @@ def index():
   global count
   if request.method == "POST":
     count += 1
-    return render_template('index.html', count=count)
+    return redirect('/')
   else:
     return render_template('index.html', count=count)
 
