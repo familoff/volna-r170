@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route('/', methods=['POST', 'GET'])
 def index():
-  tab_1 = list(range(100))
+  tab_1 = [0 for i in range(100)]
   if request.method == "POST":
     '''
     x1 = str(round(random.uniform(0.74, 0.81), 2))
