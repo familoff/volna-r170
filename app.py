@@ -12,15 +12,19 @@ def index():
     if x1 == "0.8":
       x1 = "0.80"
     #print("'0,775±0,070'       {0}   {0}".format(x1))
-  
     x2 = str(round(random.uniform(2.6, 3.2), 1))
     #print("'2,5, не менее'     {0}    {0}".format(x2))
-
     x3 = str(round(random.uniform(3.2, 3.9), 1))
     #print("'2,7, не менее'     {0}    {0}".format(x3))
+    x4 = str(round(random.uniform(0.25, 0.39), 2))
+    #print("'0,1, не менее'        {0}".format(x4))
+    x5 = str(round(random.uniform(0.51, 0.62), 2))
+    #print("'0,25, не менее'    {0}   {0}".format(x5))
+    x6 = str(round(random.uniform(0.50, 0.75), 2))
+    #print("'0,35, не менее'       {0}".format(x6))
       
     #return redirect('/')
-    return render_template('index.html', x1=x1, x2=x2, x3=x3)
+    return render_template('index.html', x1=x1, x2=x2, x3=x3, x4=x4, x5=x5, x6=x6)
   else:
     return render_template('index.html', )
   
