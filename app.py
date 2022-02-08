@@ -10,7 +10,7 @@ def index():
     
     x1 = str(round(random.uniform(0.74, 0.81), 2))
     if x1 == "0.8":
-    x1 = "0.80"
+      x1 = "0.80"
     #print("'0,775±0,070'       {0}   {0}".format(x1))
   
     x2 = str(round(random.uniform(2.6, 3.2), 1))
