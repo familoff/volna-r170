@@ -6,6 +6,7 @@ app = Flask(__name__)
 
 @app.route('/', methods=['POST', 'GET'])
 def index():
+  tab_1 = list(range(100))
   if request.method == "POST":
     '''
     x1 = str(round(random.uniform(0.74, 0.81), 2))
@@ -35,7 +36,7 @@ def index():
     #return render_template('index.html', x1=x1, x2=x2, x3=x3, x4=x4, x5=x5, x6=x6)
     return render_template('index.html', tab_1=tab_1)
   else:
-    return render_template('index.html')
+    return render_template('index.html', tab_1=tab_1)
   
   
 #Table_1
