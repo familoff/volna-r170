@@ -8,26 +8,24 @@ app = Flask(__name__)
 def index():
   if request.method == "POST":
     
-    
     x1 = str(round(random.uniform(0.74, 0.81), 2))
     if x1 == "0.8":
     x1 = "0.80"
-    print("'0,775±0,070'       {0}   {0}".format(x1))
+    #print("'0,775±0,070'       {0}   {0}".format(x1))
   
     x2 = str(round(random.uniform(2.6, 3.2), 1))
-    print("'2,5, не менее'     {0}    {0}".format(x2))
+    #print("'2,5, не менее'     {0}    {0}".format(x2))
 
     x3 = str(round(random.uniform(3.2, 3.9), 1))
-    print("'2,7, не менее'     {0}    {0}".format(x3))
-    
-    
-    
+    #print("'2,7, не менее'     {0}    {0}".format(x3))
+      
     #return redirect('/')
     return render_template('index.html', x1=x1, x2=x2, x3=x3)
   else:
     return render_template('index.html', )
   
   
+'''  
 #Table_1
 def table_1():
   x1 = str(round(random.uniform(0.74, 0.81), 2))
@@ -67,7 +65,7 @@ def table_1():
 
   x12 = "-" + x11 
   print("'плюс (20,0±5)'    {0} {0}".format(x12))
-  
+'''  
 
   
   
