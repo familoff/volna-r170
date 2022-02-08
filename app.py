@@ -42,7 +42,7 @@ def index():
 #Table_1
 def table_1():
   tab_1 = []
-  tabb_1[0] = 0
+  tab_1[0] = 0
   x1 = str(round(random.uniform(0.74, 0.81), 2))
   if x1 == "0.8":
     x1 = "0.80"
