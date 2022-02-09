@@ -29,42 +29,39 @@ def table_1():
   x3 = str(round(random.uniform(3.2, 3.9), 1))
   tab_1.append(x3)
   #print("'2,7, не менее'     {0}    {0}".format(x3))
-
   x4 = str(round(random.uniform(0.25, 0.39), 2))
   tab_1.append(x4)
   #print("'0,1, не менее'        {0}".format(x4))
-
   x5 = str(round(random.uniform(0.51, 0.62), 2))
   tab_1.append(x5)
   #print("'0,25, не менее'    {0}   {0}".format(x5))
-
   x6 = str(round(random.uniform(0.50, 0.75), 2))
   tab_1.append(x6)
   #print("'0,35, не менее'       {0}".format(x6))
-
   x7 = str(round(random.uniform(10.5, 12.4), 1))
   tab_1.append(x7)
   #print("'плюс (10,0±2,5)'   {0}   {0}".format(x7))
-
   x8 = str(round(random.uniform(-0.3, -0.6), 1))
   tab_1.append(x8)
   #print("'минус (0,6±0,5)'  {0}   {0}".format(x8))
-
   x9 = str(round(random.uniform(float(x7), float(x7) + 0.4), 1))
   tab_1.append(x9)
   #print("'плюс (10,0±2,5)'      {0}".format(x9))
-
   x10 = str(round(random.uniform(-0.3, -0.6), 1))
   tab_1.append(x10)
   #print("'минус (0,6±0,5)'      {0}".format(x10))
-
   x11 = str(round(random.uniform(20.1, 22.5), 1))
   tab_1.append(x11)
   #print("'плюс (20,0±5)'     {0}  {0}".format(x11))
-
   x12 = "-" + x11
   tab_1.append(x12)
   #print("'плюс (20,0±5)'    {0} {0}".format(x12))
+  
+  #Продолжение таблицы 1
+  
+  
+  
+  
   
   return tab_1
   
