@@ -395,16 +395,20 @@
     </div><!--row-->
     
     
-    <div class="row row-cols-21">
-      
-      {% for i in f_tune %}
-      
+    <div class="row">
+      {% for i in f_tune1 %}
         <div class="col">
           <p align="center"><b>{{ i }}</b></p>
         </div>
-    
       {% endfor %}
+    </div>
     
+    <div class="row">
+      {% for i in vol1 %}
+        <div class="col">
+          <p align="center">{{ i }}</p>
+        </div>
+      {% endfor %}
     </div>
       
       
