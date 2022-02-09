@@ -8,25 +8,30 @@ app = Flask(__name__)
 def index():
   tab_1 = [0 for i in range(100)]
   vol = [0 for i in range(100)]
-  
   f_tune = ["1,6", "4,5", "8,1", "14,1", "25,1", "31,1", "32,1", 
           "33,1", "34,1", "36,1", "37,1", "39,1", "41,1", "43,1", 
           "44,1", "46,1", "48,1", "50,1", "52,1", "54,1", "57,1",
           "59,1", "61,1", "64,1", "67,1", "69,1", "72,1", "75,1", "79,1"]
-  '''
-  f_tune = ["1,6", "4,5", "8,1", "14,1", "25,1", "31,1", "32,1", 
-          "33,1", "34,1", "36,1", "37,1", "39,1", "41,1", "43,1", 
-          "44,1", "46,1", "48,1", "50,1", "52,1", "54,1", "57,1",]
-  '''        
-  
+  f_tune1 = f_tune[:21]
+  f_rune2 = f_tune[21:]
+  vol1 = vol[:21]
+  vol2 = vol[21:]
+        
   if request.method == "POST":
+    #Table 1
     tab_1 = table_1()
-    vol = table_2_1()
+    #Table 2.1
+    f_tune, vol = table_2_1()
+    f_tune1 = f_tune[:21]
+    f_rune2 = f_tune[21:]
+    vol1 = vol[:21]
+    vol2 = vol[21:]
     
-    return render_template('index.html', tab_1=tab_1, f_tune=f_tune, vol=vol)
+    
+    return render_template('index.html', tab_1=tab_1, f_tune1=f_tune1, f_tune2=f_tune2, vol1=vol1, vol2=vol2)
   
   else:
-    return render_template('index.html', tab_1=tab_1, f_tune=f_tune, vol=vol)
+    return render_template('index.html', tab_1=tab_1, f_tune1=f_tune1, f_tune2=f_tune2, vol1=vol1, vol2=vol2)
   
   
 #Table_1
@@ -106,7 +111,7 @@ def table_2_1():
   vol[2] = max(vol)
   vol[5] = max(vol)
   
-  return vol
+  return f_tune, vol
   
   
   
