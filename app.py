@@ -15,7 +15,7 @@ def index():
   
   if request.method == "POST":
     tab_1 = table_1()
-    vol = table__2_1()
+    vol = table_2_1()
     
     return render_template('index.html', tab_1=tab_1, f_tune=f_tune, vol=vol)
   
