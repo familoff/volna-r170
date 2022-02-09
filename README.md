@@ -1,3 +1,3 @@
 protocol data generator
 
-The application is located at https://flask-blog-01.herokuapp.com
+The application is located at https://volna-r170.herokuapp.com
