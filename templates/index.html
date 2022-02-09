@@ -328,7 +328,7 @@
     
     <br>
     
-    <div class="row">
+    <!--div class="row">
       <div class="col">
         <p align="center"><mark>{{ f_tune[0] }}</mark></p>
       </div>
@@ -394,6 +394,20 @@
       </div>
     </div><!--row-->
     
+    
+    <div class="row">
+      
+      {% for i in f_tune %}
+      
+        <div class="col">
+          <p align="center">{{ i }}</p>
+        </div>
+    
+      {% endfor %}
+    
+    </div>
+      
+      
     <div class="row">
       <div class="col">
         <p align="center">{{ vol[0] }}</p>
