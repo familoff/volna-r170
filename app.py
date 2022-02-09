@@ -54,7 +54,7 @@ def table_1():
   tab_1.append(x9)
   #print("'плюс (10,0±2,5)'      {0}".format(x9))
 
-  x10 = str(round(random.uniform(0.3, 0.6), 1))
+  x10 = str(round(random.uniform(-0.3, -0.6), 1))
   tab_1.append(x10)
   #print("'минус (0,6±0,5)'      {0}".format(x10))
 
