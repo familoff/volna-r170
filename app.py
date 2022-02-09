@@ -7,12 +7,20 @@ app = Flask(__name__)
 @app.route('/', methods=['POST', 'GET'])
 def index():
   tab_1 = [0 for i in range(100)]
+  vol = [0 for i in range(100)]
+  f_tune = ["1,6", "4,5", "8,1", "14,1", "25,1", "31,1", "32,1", 
+          "33,1", "34,1", "36,1", "37,1", "39,1", "41,1", "43,1", 
+          "44,1", "46,1", "48,1", "50,1", "52,1", "54,1", "57,1",
+          "59,1", "61,1", "64,1", "67,1", "69,1", "72,1", "75,1", "79,1"]
+  
   if request.method == "POST":
     tab_1 = table_1()
+    vol = table__2_1()
     
-    return render_template('index.html', tab_1=tab_1)
+    return render_template('index.html', tab_1=tab_1, f_tune=f_tune, vol=vol)
+  
   else:
-    return render_template('index.html', tab_1=tab_1)
+    return render_template('index.html', tab_1=tab_1, f_tune=f_tune, vol=vol)
   
   
 #Table_1
@@ -57,13 +65,43 @@ def table_1():
   tab_1.append(x12)
   #print("'плюс (20,0±5)'    {0} {0}".format(x12))
   
-  #Продолжение таблицы 1
-  
-  
-  
-  
-  
   return tab_1
+
+
+#Table_2_1
+def table_2_1():
+  f_tune = ["1,6", "4,5", "8,1", "14,1", "25,1", "31,1", "32,1", 
+          "33,1", "34,1", "36,1", "37,1", "39,1", "41,1", "43,1", 
+          "44,1", "46,1", "48,1", "50,1", "52,1", "54,1", "57,1",
+          "59,1", "61,1", "64,1", "67,1", "69,1", "72,1", "75,1", "79,1"]
+  
+  vol = []
+  x = round(random.uniform(1.4, 1.6), 1)
+  for i in f_tune:
+    a = round(random.uniform(x-0.2, x+0.3), 1)
+    if a > 2.1:
+      a = 2.1
+    vol.append(a)
+    x = a
+  
+  temp = vol[0]
+  count = 1
+  for i in range(1, len(vol)):
+    if vol[i] == temp:
+      count += 1
+      if count > 2:
+        vol[i] += round(random.uniform(-0.3, +0.0), 1)
+    else:
+      count = 1
+      temp = vol[i]
+      
+  vol = list(map(lambda x: round(x, 1), vol))
+  
+  vol[2] = max(vol)
+  vol[5] = max(vol)
+  
+  return vol
+  
   
   
 
