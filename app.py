@@ -15,8 +15,8 @@ def index():
            "  ", "  ", "  "]
   f_tune1 = f_tune[:21]
   f_tune2 = f_tune[21:]
-  vol1 = ["0" for i in range(29)]
-  vol2 = [" " for i in range(13)]
+  vol1 = ["0" for i in range(21)]
+  vol2 = ["0" for i in range(8)] + [" " for i in range(13)]
         
   if request.method == "POST":
     #Table 1
