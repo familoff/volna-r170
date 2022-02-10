@@ -303,6 +303,100 @@ def table_4_1():
   #print("   5,0        {}".format(x39))
   
   return tab_4_1
+
+
+#Table 4.2
+def table_4_2():
+  tab_4_2 = ["0"]
+  x1 = str(round(random.uniform(0.4, 0.6), 1))
+  #print("10      {}".format(x1))
+  x2 = str(round(random.uniform(0.2, 0.4), 1))
+  #print("5       {}".format(x2))
+  x3 = str(round(random.uniform(0.3, 0.5), 1))
+  #print("7       {}".format(x3))
+  x4 = str(round(random.uniform(0.4, 0.6), 1))
+  #print("10      {}".format(x4))
+  x5 = str(round(random.uniform(0.2, 0.4), 1))
+  #print("5       {}".format(x5))
+  x6 = str(round(random.uniform(0.2, 0.4), 1))
+  #print("5       {}".format(x6))
+  x7 = str(round(random.uniform(0.3, 0.5), 1))
+  #print("7       {}".format(x7))
+  x8 = str(round(random.uniform(0.3, 0.5), 1))
+  #print("7       {}".format(x8), "\n")
+
+  x9 = str(round(random.uniform(0.2, 0.4), 1))
+  #print("5     {0}|{0}".format(x9))
+  x10 = str(round(random.uniform(0.2, 0.4), 1))
+  #print("5     {0}|{0}".format(x10), "\n")
+
+  x11 = str(round(random.uniform(0.3, 0.5), 1))
+  #print("7       {}".format(x11), "\n")
+
+  x12 = str(round(random.uniform(0.4, 0.6), 1))
+  #print("10    {0}|{0}".format(x12))
+  x13 = str(round(random.uniform(0.4, 0.6), 1))
+  #print("        {}".format(x13), "\n")
+
+  x140 = str(round(random.uniform(0.4, 0.6), 1))
+  #print("10    {0}|{0}".format(x140))
+  x150 = str(round(random.uniform(0.4, 0.6), 1))
+  #print("      {0}|{0}".format(x150), "\n")
+
+  x14 = str(round(random.uniform(0.4, 0.6), 1))
+  #print("      {0}|{0}".format(x14))
+  x15 = str(round(random.uniform(0.4, 0.6), 1))
+  #print("10    {0}|{0}".format(x15))
+  x16 = str(round(random.uniform(0.4, 0.6), 1))
+  #print("      {0}|{0}".format(x16), "\n")
+
+  x17 = str(round(random.uniform(0.4, 0.6), 1))
+  #print("10    {0}|{0}".format(x17))
+  x18 = str(round(random.uniform(0.4, 0.6), 1))
+  #print("      {0}|{0}".format(x18), "\n")
+
+  x19 = str(round(random.uniform(0.6, 1.0), 1))
+  #print("15    {0}|{0}".format(x19))
+  x20 = str(float(x19) + 0.1)
+  if float(x19) == 0.7:
+      x20 = "0.8"
+  #print("      {0}|{0}".format(x20), "\n")
+
+  x21 = str(round(random.uniform(0.4, 0.8), 1))
+  #print("      {0}|{0}".format(x21))
+  x22 = str(round(random.uniform(0.4, 0.8), 1))
+  #print("10    {0}|{0}".format(x22))
+  x23 = str(round(random.uniform(0.4, 0.8), 1))
+  #print("      {0}|{0}".format(x23))
+  x24 = str(round(random.uniform(0.4, 0.8), 1))
+  #print("      {0}|{0}".format(x24), "\n")
+
+  x25 = str(round(random.uniform(0.6, 1.0), 1))
+  #print("15    {0}|{0}".format(x25), "\n")
+
+  x26 = str(round(random.uniform(0.4, 0.8), 1))
+  #print("      {0}|{0}".format(x26))
+  x27 = str(round(random.uniform(0.4, 0.8), 1))
+  #print("10    {0}|{0}".format(x27))
+  x28 = str(round(random.uniform(0.4, 0.8), 1))
+  #print("      {0}|{0}".format(x28))
+  x29 = str(round(random.uniform(0.4, 0.8), 1))
+  #print("      {0}|{0}".format(x29), "\n")
+
+  x30 = str(round(random.uniform(0.8, 1.0), 1))
+  #print("15    {0}|{0}".format(x30))
+  x31 = str(float(x30) + 0.2)
+  if float(x30) == 0.7:
+      x31 = "0.9"
+  #print("      {0}|{0}".format(x31), "\n")
+
+  x32 = str(round(random.uniform(1.8, 3.0), 1))
+  #print("10    {0}|{0}".format(x32))
+  x33 = str(round(random.uniform(0.4, 0.6), 1))
+  #print("        {}".format(x33))
+  
+  return tab_4_2
+  
   
   
   
