@@ -7,7 +7,6 @@ app = Flask(__name__)
 @app.route('/', methods=['POST', 'GET'])
 def index():
   tab_1 = [0 for i in range(100)]
-  vol = [0 for i in range(29)]
   f_tune = ["1,6", "4,5", "8,1", "14,1", "25,1", "31,1", "32,1", 
           "33,1", "34,1", "36,1", "37,1", "39,1", "41,1", "43,1", 
           "44,1", "46,1", "48,1", "50,1", "52,1", "54,1", "57,1",
@@ -16,8 +15,8 @@ def index():
            "  ", "  ", "  "]
   f_tune1 = f_tune[:21]
   f_tune2 = f_tune[21:]
-  vol1 = vol[:21]
-  vol2 = vol[21:]
+  vol1 = ["0" for i in range(29)]
+  vol2 = [" " for i in range(13)]
         
   if request.method == "POST":
     #Table 1
