@@ -113,7 +113,7 @@ def table_2_1():
   
   vol[2] = max(vol)
   vol[5] = max(vol)
-  vol = vol + [" " for i in range(8)]
+  vol = vol + [" " for i in range(13)]
   
   return f_tune, vol
   
