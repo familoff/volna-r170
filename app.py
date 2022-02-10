@@ -91,7 +91,7 @@ def table_2_1():
   
   vol = []
   x = round(random.uniform(1.4, 1.6), 1)
-  for i in f_tune:
+  for i in range(29):
     a = round(random.uniform(x-0.2, x+0.3), 1)
     if a > 2.1:
       a = 2.1
@@ -100,7 +100,7 @@ def table_2_1():
   
   temp = vol[0]
   count = 1
-  for i in range(1, 29):
+  for i in range(1, len(vol)):
     if vol[i] == temp:
       count += 1
       if count > 2:
@@ -113,7 +113,7 @@ def table_2_1():
   
   vol[2] = max(vol)
   vol[5] = max(vol)
-  vol = vol + [0 for i in range(8)]
+  vol = vol + [" " for i in range(8)]
   
   return f_tune, vol
   
