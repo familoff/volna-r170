@@ -18,6 +18,7 @@ def index():
   vol1 = ["0" for i in range(21)]
   vol2 = ["0" for i in range(8)] + [" " for i in range(13)]
   tab_3 = [0 for i in range(100)]
+  tab_4_1 = [0 for i in range(100)]
         
   if request.method == "POST":
     #Table 1
@@ -30,15 +31,18 @@ def index():
     vol2 = vol[21:]
     #Table 3
     tab_3 = table_3()
+    #Table 4.1
     
     
-    return render_template('index.html', tab_1=tab_1, f_tune1=f_tune1, f_tune2=f_tune2, vol1=vol1, vol2=vol2, tab_3=tab_3)
+    return render_template('index.html', tab_1=tab_1, f_tune1=f_tune1, f_tune2=f_tune2, 
+                           vol1=vol1, vol2=vol2, tab_3=tab_3, tab_4_1=tab_4_1)
   
   else:
-    return render_template('index.html', tab_1=tab_1, f_tune1=f_tune1, f_tune2=f_tune2, vol1=vol1, vol2=vol2, tab_3=tab_3)
+    return render_template('index.html', tab_1=tab_1, f_tune1=f_tune1, f_tune2=f_tune2, 
+                           vol1=vol1, vol2=vol2, tab_3=tab_3, tab_4_1=tab_4_1)
   
   
-#Table_1
+#Table 1
 def table_1():
   tab_1 = ["0"]
   x1 = str(round(random.uniform(0.74, 0.81), 2))
@@ -83,7 +87,7 @@ def table_1():
   return tab_1
 
 
-#Table_2_1
+#Table 2.1
 def table_2_1():
   f_tune = ["1,6", "4,5", "8,1", "14,1", "25,1", "31,1", "32,1", 
           "33,1", "34,1", "36,1", "37,1", "39,1", "41,1", "43,1", 
@@ -121,7 +125,7 @@ def table_2_1():
   return f_tune, vol
 
 
-#Table_3
+#Table 3
 def table_3():
   tab_3 = ["0"]
   x1 = str(round(random.uniform(0.4, 0.8), 1))
@@ -169,6 +173,11 @@ def table_3():
   #print("   4,8      {}".format(x14))
   
   return tab_3
+
+
+#Table 4.1
+def table_1():
+  tab_1 = ["0"]
   
   
   
