@@ -17,6 +17,7 @@ def index():
   f_tune2 = f_tune[21:]
   vol1 = ["0" for i in range(21)]
   vol2 = ["0" for i in range(8)] + [" " for i in range(13)]
+  tab_3 = [0 for i in range(100)]
         
   if request.method == "POST":
     #Table 1
@@ -27,12 +28,14 @@ def index():
     f_rune2 = f_tune[21:]
     vol1 = vol[:21]
     vol2 = vol[21:]
+    #Table 3
+    tab_3 = table_3()
     
     
-    return render_template('index.html', tab_1=tab_1, f_tune1=f_tune1, f_tune2=f_tune2, vol1=vol1, vol2=vol2)
+    return render_template('index.html', tab_1=tab_1, f_tune1=f_tune1, f_tune2=f_tune2, vol1=vol1, vol2=vol2, tab_3=tab_3)
   
   else:
-    return render_template('index.html', tab_1=tab_1, f_tune1=f_tune1, f_tune2=f_tune2, vol1=vol1, vol2=vol2)
+    return render_template('index.html', tab_1=tab_1, f_tune1=f_tune1, f_tune2=f_tune2, vol1=vol1, vol2=vol2, tab_3=tab_3)
   
   
 #Table_1
@@ -116,6 +119,57 @@ def table_2_1():
   vol = vol + [" " for i in range(13)]
   
   return f_tune, vol
+
+
+#Table_3
+def table_3():
+  tab_3 = ["0"]
+  x1 = str(round(random.uniform(0.4, 0.8), 1))
+  tab_3.append(x1)
+  #print("   1,2      {}".format(x1))
+  x2 = str(round(random.uniform(1.0, 1.6), 1))
+  tab_3.append(x2)
+  #print("   2,4      {}".format(x2))
+  x3 = str(round(float(x2) + random.uniform(0.3, 0.7), 1))
+  tab_3.append(x3)
+  #print("   3,3      {}".format(x3))
+  x4 = str(round(random.uniform(7.5, 8.9), 1))
+  tab_3.append(x4)
+  #print(" 18(m=30%)  {}".format(x4))
+  x5 = str(round(random.uniform(2.0, 2.8), 1))
+  tab_3.append(x5)
+  #print("8,5(m=90%)  {}".format(x5))
+  x6 = str(round(random.uniform(2.0, 2.8), 1))
+  tab_3.append(x6)
+  #print("8,5(m=90%)  {}".format(x6))
+  x7 = str(round(random.uniform(4.5, 5.5), 1))
+  tab_3.append(x7)
+  #print("   6,0      {}".format(x7))
+  #print("- - - - - - - -")
+  x8 = str(round(random.uniform(0.4, 0.6), 1))
+  tab_3.append(x8)
+  #print("   1,0      {}".format(x8))
+  x9 = str(round(random.uniform(1.2, 1.6), 1))
+  tab_3.append(x9)
+  #print("   2,0      {}".format(x9))
+  x10 = str(round(random.uniform(1.9, 2.2), 1))
+  tab_3.append(x10)
+  #print("   2,7      {}".format(x10))
+  x11 = str(round(random.uniform(13.2, 14.2), 1))
+  tab_3.append(x11)
+  #print("14,5(m=30%) {}".format(x11))
+  x12 = str(round(random.uniform(2.5, 3.6), 1))
+  tab_3.append(x12)
+  #print(" 6,8(m=90%) {}".format(x12))
+  x13 = str(round(random.uniform(2.5, 3.6), 1))
+  tab_3.append(x13)
+  #print(" 6,8(m=90%) {}".format(x13))
+  x14 = str(round(random.uniform(1.6, 2.8), 1))
+  tab_3.append(x14)
+  #print("   4,8      {}".format(x14))
+  
+  return tab_3
+  
   
   
   
