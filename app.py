@@ -100,7 +100,7 @@ def table_2_1():
   
   temp = vol[0]
   count = 1
-  for i in range(1, len(vol)):
+  for i in range(1, 29):
     if vol[i] == temp:
       count += 1
       if count > 2:
