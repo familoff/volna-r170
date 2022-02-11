@@ -438,18 +438,18 @@ def table_5():
           f = 79
       if f < 25:
           lev = 7
-      elif 25 < f < 35:
+      elif 25 <= f < 35:
           lev = 7.5
-      elif 35 < f < 45:
+      elif 35 <= f < 45:
           lev = 8
-      elif 45 < f < 55:
+      elif 45 <= f < 55:
           lev = 8.5
-      elif 55 < f < 65:
+      elif 55 <= f < 65:
           lev = 9
-      elif 65 < f < 70:
+      elif 65 <= f < 70:
           lev = 9.5
       else:
-          lev = random.randint(9, 10)
+          lev = 10
 
       for i in ["997", "998", "999"]:
          f_list.add("{}   {}".format(str(f)+i, lev))
