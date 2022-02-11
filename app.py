@@ -34,7 +34,7 @@ def index():
     tab_3 = table_3()
     #Table 4.1
     tab_4_1 = table_4_1()
-    tab_4_2 = [0 for i in range(100)]
+    tab_4_2 = table_4_2()
     
     
     return render_template('index.html', tab_1=tab_1, f_tune1=f_tune1, f_tune2=f_tune2, 
