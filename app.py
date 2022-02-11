@@ -20,6 +20,7 @@ def index():
   tab_3 = [0 for i in range(100)]
   tab_4_1 = [0 for i in range(100)]
   tab_4_2 = [0 for i in range(100)]
+  tab_5_1, tab_5_2 = [0 for i in range(10)], [0 for i in range(10)]
         
   if request.method == "POST":
     #Table 1
@@ -35,14 +36,17 @@ def index():
     #Table 4.1
     tab_4_1 = table_4_1()
     tab_4_2 = table_4_2()
+    tab_5_1, tab_5_2 = table_5()
     
     
     return render_template('index.html', tab_1=tab_1, f_tune1=f_tune1, f_tune2=f_tune2, 
-                           vol1=vol1, vol2=vol2, tab_3=tab_3, tab_4_1=tab_4_1, tab_4_2=tab_4_2)
+                           vol1=vol1, vol2=vol2, tab_3=tab_3, tab_4_1=tab_4_1, tab_4_2=tab_4_2,
+                          tab_5_1=tab_5_1, tab_5_2=tab_5_2)
   
   else:
     return render_template('index.html', tab_1=tab_1, f_tune1=f_tune1, f_tune2=f_tune2, 
-                           vol1=vol1, vol2=vol2, tab_3=tab_3, tab_4_1=tab_4_1, tab_4_2=tab_4_2)
+                           vol1=vol1, vol2=vol2, tab_3=tab_3, tab_4_1=tab_4_1, tab_4_2=tab_4_2,
+                          tab_5_1=tab_5_1, tab_5_2=tab_5_2)
   
   
 #Table 1
@@ -421,6 +425,52 @@ def table_4_2():
   #print("        {}".format(x33))
   
   return tab_4_2
+
+
+#Table 5
+def table_5():
+  tab_5 = ["0"]
+  f_list = set()
+  for i in range(random.randint(7, 10)):
+      lev = 0
+      f = random.randint(10, 79)
+      if i == 9:
+          f = 79
+      if f < 25:
+          lev = 7
+      elif 25 < f < 35:
+          lev = 7.5
+      elif 35 < f < 45:
+          lev = 8
+      elif 45 < f < 55:
+          lev = 8.5
+      elif 55 < f < 65:
+          lev = 9
+      elif 65 < f < 70:
+          lev = 9.5
+      else:
+          lev = random.randint(9, 10)
+
+      for i in ["997", "998", "999"]:
+         f_list.add("{}   {}".format(str(f)+i, lev))
+
+  tab_5 = sorted(list(f_list))
+  
+  tab_5_1 = []
+  tab_5_2 = []
+  for i in tab_5:
+    a, b = i.split()
+    tab_5_1.append(a)
+    tab_5_2.append(b)
+    
+  return tab_5_1, tab_5_2  
+          
+
+
+  
+  
+  
+  
   
   
   
