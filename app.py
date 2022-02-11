@@ -20,7 +20,7 @@ def index():
   tab_3 = [0 for i in range(100)]
   tab_4_1 = [0 for i in range(100)]
   tab_4_2 = [0 for i in range(100)]
-  tab_5_1, tab_5_2 = [0 for i in range(10)], [0 for i in range(10)]
+  tab_5 = [[0, 0] for i in range(10)]
         
   if request.method == "POST":
     #Table 1
@@ -36,17 +36,17 @@ def index():
     #Table 4.1
     tab_4_1 = table_4_1()
     tab_4_2 = table_4_2()
-    tab_5_1, tab_5_2 = table_5()
+    tab_5 = table_5()
     
     
     return render_template('index.html', tab_1=tab_1, f_tune1=f_tune1, f_tune2=f_tune2, 
                            vol1=vol1, vol2=vol2, tab_3=tab_3, tab_4_1=tab_4_1, tab_4_2=tab_4_2,
-                          tab_5_1=tab_5_1, tab_5_2=tab_5_2)
+                          tab_5=tab_5)
   
   else:
     return render_template('index.html', tab_1=tab_1, f_tune1=f_tune1, f_tune2=f_tune2, 
                            vol1=vol1, vol2=vol2, tab_3=tab_3, tab_4_1=tab_4_1, tab_4_2=tab_4_2,
-                          tab_5_1=tab_5_1, tab_5_2=tab_5_2)
+                          tab_5=tab_5)
   
   
 #Table 1
@@ -454,16 +454,11 @@ def table_5():
       for i in ["997", "998", "999"]:
          f_list.add("{}   {}".format(str(f)+i, lev))
 
-  tab_5 = sorted(list(f_list))
+  tab = sorted(list(f_list))
   
-  tab_5_1 = []
-  tab_5_2 = []
-  for i in tab_5:
-    a, b = i.split()
-    tab_5_1.append(a)
-    tab_5_2.append(b)
+  tab_5 = list(map(lambda x: x.split(), tab))
     
-  return tab_5_1, tab_5_2  
+  return tab_5
           
 
 
