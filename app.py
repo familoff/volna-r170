@@ -19,6 +19,7 @@ def index():
   vol2 = ["0" for i in range(8)] + [" " for i in range(13)]
   tab_3 = [0 for i in range(100)]
   tab_4_1 = [0 for i in range(100)]
+  tab_4_2 = [0 for i in range(100)]
         
   if request.method == "POST":
     #Table 1
@@ -33,14 +34,15 @@ def index():
     tab_3 = table_3()
     #Table 4.1
     tab_4_1 = table_4_1()
+    tab_4_2 = [0 for i in range(100)]
     
     
     return render_template('index.html', tab_1=tab_1, f_tune1=f_tune1, f_tune2=f_tune2, 
-                           vol1=vol1, vol2=vol2, tab_3=tab_3, tab_4_1=tab_4_1)
+                           vol1=vol1, vol2=vol2, tab_3=tab_3, tab_4_1=tab_4_1, tab_4_2=tab_4_2)
   
   else:
     return render_template('index.html', tab_1=tab_1, f_tune1=f_tune1, f_tune2=f_tune2, 
-                           vol1=vol1, vol2=vol2, tab_3=tab_3, tab_4_1=tab_4_1)
+                           vol1=vol1, vol2=vol2, tab_3=tab_3, tab_4_1=tab_4_1, tab_4_2=tab_4_2)
   
   
 #Table 1
@@ -324,20 +326,16 @@ def table_4_2():
   #print("7       {}".format(x7))
   x8 = str(round(random.uniform(0.3, 0.5), 1))
   #print("7       {}".format(x8), "\n")
-
   x9 = str(round(random.uniform(0.2, 0.4), 1))
   #print("5     {0}|{0}".format(x9))
   x10 = str(round(random.uniform(0.2, 0.4), 1))
   #print("5     {0}|{0}".format(x10), "\n")
-
   x11 = str(round(random.uniform(0.3, 0.5), 1))
   #print("7       {}".format(x11), "\n")
-
   x12 = str(round(random.uniform(0.4, 0.6), 1))
   #print("10    {0}|{0}".format(x12))
   x13 = str(round(random.uniform(0.4, 0.6), 1))
   #print("        {}".format(x13), "\n")
-
   x140 = str(round(random.uniform(0.4, 0.6), 1))
   #print("10    {0}|{0}".format(x140))
   x150 = str(round(random.uniform(0.4, 0.6), 1))
@@ -349,19 +347,16 @@ def table_4_2():
   #print("10    {0}|{0}".format(x15))
   x16 = str(round(random.uniform(0.4, 0.6), 1))
   #print("      {0}|{0}".format(x16), "\n")
-
   x17 = str(round(random.uniform(0.4, 0.6), 1))
   #print("10    {0}|{0}".format(x17))
   x18 = str(round(random.uniform(0.4, 0.6), 1))
   #print("      {0}|{0}".format(x18), "\n")
-
   x19 = str(round(random.uniform(0.6, 1.0), 1))
   #print("15    {0}|{0}".format(x19))
   x20 = str(float(x19) + 0.1)
   if float(x19) == 0.7:
       x20 = "0.8"
   #print("      {0}|{0}".format(x20), "\n")
-
   x21 = str(round(random.uniform(0.4, 0.8), 1))
   #print("      {0}|{0}".format(x21))
   x22 = str(round(random.uniform(0.4, 0.8), 1))
@@ -370,10 +365,8 @@ def table_4_2():
   #print("      {0}|{0}".format(x23))
   x24 = str(round(random.uniform(0.4, 0.8), 1))
   #print("      {0}|{0}".format(x24), "\n")
-
   x25 = str(round(random.uniform(0.6, 1.0), 1))
   #print("15    {0}|{0}".format(x25), "\n")
-
   x26 = str(round(random.uniform(0.4, 0.8), 1))
   #print("      {0}|{0}".format(x26))
   x27 = str(round(random.uniform(0.4, 0.8), 1))
@@ -382,14 +375,12 @@ def table_4_2():
   #print("      {0}|{0}".format(x28))
   x29 = str(round(random.uniform(0.4, 0.8), 1))
   #print("      {0}|{0}".format(x29), "\n")
-
   x30 = str(round(random.uniform(0.8, 1.0), 1))
   #print("15    {0}|{0}".format(x30))
   x31 = str(float(x30) + 0.2)
   if float(x30) == 0.7:
       x31 = "0.9"
   #print("      {0}|{0}".format(x31), "\n")
-
   x32 = str(round(random.uniform(1.8, 3.0), 1))
   #print("10    {0}|{0}".format(x32))
   x33 = str(round(random.uniform(0.4, 0.6), 1))
