@@ -22,7 +22,7 @@ def index():
   tab_4_2 = [0 for i in range(100)]
   tab_5 = [[0, 0] for i in range(10)]
   tab_6 = [[0, 0, 0] for i in range(10)]
-  tab_6_1 = [[0, 0, 0] for i in range(10)]
+  tab_6_1 = [[0, 0] for i in range(10)]
   
         
   if request.method == "POST":
@@ -534,11 +534,14 @@ def table_6(t1, t2):
   #print("-(0,6±0,5)   {0}         {1}         {0}".format(a3, round(a3_1, 1)))
   tab_6.append(["-(0,6±0,5)", a3, round(a3_1, 1)])
   
+  volumes_1 = t2[:29]
+  temp_v = list(map(lambda x: x+0.1, volumes_1))
+  volumes_2 = list(map(lambda x: round(x, 1), temp_v))
+  tab_6_1 = []
   
- 
-  tab_6_1 = t2[:29]
-  
-  
+  for i in range(len(volumes_1)):
+    tab_6_1.append(volumes_1[i], volumes_2[i])
+    
   
   
   
