@@ -1245,81 +1245,23 @@
   
     <h5><i>Таблица 6</i></h5>
     
-     <div class="row">
-      <div class="col-6"> 
-        <p align="center">2,7</p>
+
+    {% for i in  tab_6 %}
+      <div class="row">
+        <div class="col-6"> 
+          <p align="center">{{ i[0] }}</p>
+        </div>
+        <div class="col">
+          <p align="center">{{ i[1] }}/{{ i[1] }}</p>
+        </div>
+        <div class="col">
+          <p align="center">{{ i[2] }}/{{ i[2] }}</p>
+        </div>
+        <div class="col">
+          <p align="center">{{ i[1] }}/{{ i[1] }}</p>
+        </div>
       </div>
-      <div class="col">
-        <p align="center">{{ tab_6[1][0] }}/{{ tab_6[1][0] }}</p>
-      </div>
-      <div class="col">
-        <p align="center">{{ tab_6[1][1] }}/{{ tab_6[1][1] }}</p>
-      </div>
-      <div class="col">
-        <p align="center">{{ tab_6[1][0] }}/{{ tab_6[1][0] }}</p>
-      </div>
-    </div>
-    
-    <div class="row">
-      <div class="col-6"> 
-        <p align="center">10±2,5</p>
-      </div>
-      <div class="col">
-        <p align="center">{{ tab_6[2][0] }}/{{ tab_6[2][0] }}</p>
-      </div>
-      <div class="col">
-        <p align="center">{{ tab_6[2][1] }}/{{ tab_6[2][1] }}</p>
-      </div>
-      <div class="col">
-        <p align="center">{{ tab_6[2][0] }}/{{ tab_6[2][0] }}</p>
-      </div>
-    </div>
-    
-    <div class="row">
-      <div class="col-6"> 
-        <p align="center">-0,6±0,5</p>
-      </div>
-      <div class="col">
-        <p align="center">{{ tab_6[3][0] }}/{{ tab_6[3][0] }}</p>
-      </div>
-      <div class="col">
-        <p align="center">{{ tab_6[3][1] }}/{{ tab_6[3][1] }}</p>
-      </div>
-      <div class="col">
-        <p align="center">{{ tab_6[3][0] }}/{{ tab_6[3][0] }}</p>
-      </div>
-    </div>
-    
-    <div class="row">
-      <div class="col-6"> 
-        <p align="center">20±5</p>
-      </div>
-      <div class="col">
-        <p align="center">{{ tab_6[4][0] }}/{{ tab_6[4][0] }}</p>
-      </div>
-      <div class="col">
-        <p align="center">{{ tab_6[4][1] }}/{{ tab_6[4][1] }}</p>
-      </div>
-      <div class="col">
-        <p align="center">{{ tab_6[4][0] }}/{{ tab_6[4][0] }}</p>
-      </div>
-    </div>
-    
-    <div class="row">
-      <div class="col-6"> 
-        <p align="center">-20±5</p>
-      </div>
-      <div class="col">
-        <p align="center">{{ tab_6[5][0] }}/{{ tab_6[5][0] }}</p>
-      </div>
-      <div class="col">
-        <p align="center">{{ tab_6[5][1] }}/{{ tab_6[5][1] }}</p>
-      </div>
-      <div class="col">
-        <p align="center">{{ tab_6[5][0] }}/{{ tab_6[5][0] }}</p>
-      </div>
-    </div>
-    
+    {% endfor %}
     
     
     
