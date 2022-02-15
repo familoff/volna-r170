@@ -471,23 +471,23 @@ def table_6(t1, t2):
   a1 = t1[3]
   a1_1 = float(a1) + 0.1
   #print("    2,7       {0}/{0}      {1}/{1}      {0}/{0}".format(a1, round(a1_1, 1)))
-  tab_6.append([a1, round(a1_1, 1)])
+  tab_6.append(["2,7", a1, round(a1_1, 1)])
   a2 = t1[7]
   a2_1 = float(a2) + 0.1
   #print("  10±2,5     {0}/{0}    {1}/{1}    {0}/{0}".format(a2, round(a2_1, 1)))
-  tab_6.append([a2, round(a2_1, 1)])
+  tab_6.append(["10±2,5", a2, round(a2_1, 1)])
   a3 = t1[8]
   a3_1 = float(a3) + 0.1
   #print("-0,6±0,5     {0}/{0}    {1}/{1}    {0}/{0}".format(a3, round(a3_1, 1)))
-  tab_6.append([a3, round(a3_1, 1)])
+  tab_6.append(["-0,6±0,5", a3, round(a3_1, 1)])
   a4 = t1[11]
   a4_1 = float(a4) + 0.1
   #print("   20±5      {0}/{0}    {1}/{1}    {0}/{0}".format(a4, round(a4_1, 1)))
-  tab_6.append([a4, round(a4_1, 1)])
+  tab_6.append(["20±5", a4, round(a4_1, 1)])
   a5 = t1[12]
   a5_1 = float(a5) + 0.1
   #print("  -20±5     {0}/{0}  {1}/{1}  {0}/{0}".format(a5, round(a5_1, 1)), "\n")
-  tab_6.append([a5, round(a5_1, 1)])
+  tab_6.append(["-20±5", a5, round(a5_1, 1)])
   
   '''
   print("  10±2,5     {0}         {1}         {0}".format(a2, round(a2_1, 1)))
