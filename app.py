@@ -21,7 +21,9 @@ def index():
   tab_4_1 = [0 for i in range(100)]
   tab_4_2 = [0 for i in range(100)]
   tab_5 = [[0, 0] for i in range(10)]
-  tab_6 = [[0, 0] for i in range(10)]
+  tab_6 = [[0, 0, 0] for i in range(10)]
+  tab_6_1 = [[0, 0, 0] for i in range(10)]
+  
         
   if request.method == "POST":
     #Table 1
@@ -32,23 +34,24 @@ def index():
     f_rune2 = f_tune[21:]
     vol1 = vol[:21]
     vol2 = vol[21:]
+    vol = vol1 + vol2
     #Table 3
     tab_3 = table_3()
     #Table 4.1
     tab_4_1 = table_4_1()
     tab_4_2 = table_4_2()
     tab_5 = table_5()
-    tab_6 = table_6(tab_1, vol1)
+    tab_6, tab_6_1 = table_6(tab_1, vol)
     
     
     return render_template('index.html', tab_1=tab_1, f_tune1=f_tune1, f_tune2=f_tune2, 
                            vol1=vol1, vol2=vol2, tab_3=tab_3, tab_4_1=tab_4_1, tab_4_2=tab_4_2,
-                          tab_5=tab_5, tab_6=tab_6)
+                          tab_5=tab_5, tab_6=tab_6, tab_6_1=tab_6_1)
   
   else:
     return render_template('index.html', tab_1=tab_1, f_tune1=f_tune1, f_tune2=f_tune2, 
                            vol1=vol1, vol2=vol2, tab_3=tab_3, tab_4_1=tab_4_1, tab_4_2=tab_4_2,
-                          tab_5=tab_5, tab_6=tab_6)
+                          tab_5=tab_5, tab_6=tab_6, tab_6_1=tab_6_1)
   
   
 #Table 1
@@ -532,7 +535,15 @@ def table_6(t1, t2):
   tab_6.append(["-(0,6±0,5)", a3, round(a3_1, 1)])
   
   
-  return tab_6
+ 
+  tab_6_1 = t2[:29]
+  
+  
+  
+  
+  
+  
+  return tab_6, tab_6_1
   
   
           
