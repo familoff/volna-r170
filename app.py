@@ -466,7 +466,7 @@ def table_5():
 #Table 6
 def table_6(t1, t2):
   
-  tab_6 = []
+  tab_6 = [[0, 0]]
   
   a1 = t1[3]
   a1_1 = float(a1) + 0.1
