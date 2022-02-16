@@ -22,7 +22,7 @@ def index():
   tab_4_2 = [0 for i in range(100)]
   tab_5 = [[0, 0] for i in range(10)]
   tab_6 = [[0, 0, 0] for i in range(10)]
-  tab_6_1 = [[0, 0] for i in range(10)]
+  tab_6_1 = [[0, 0] for i in range(30)]
   
         
   if request.method == "POST":
