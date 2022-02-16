@@ -34,13 +34,14 @@ def index():
     f_rune2 = f_tune[21:]
     vol1 = vol[:21]
     vol2 = vol[21:]
-    vol = vol1 + vol2
     #Table 3
     tab_3 = table_3()
     #Table 4.1
     tab_4_1 = table_4_1()
     tab_4_2 = table_4_2()
+    #Table 5
     tab_5 = table_5()
+    #Table 6
     tab_6, tab_6_1 = table_6(tab_1, vol)
     
     
