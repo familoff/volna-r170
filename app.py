@@ -24,7 +24,6 @@ def index():
   tab_6 = [[0, 0, 0] for i in range(10)]
   tab_6_1 = [[0, 0] for i in range(30)]
   
-        
   if request.method == "POST":
     #Table 1
     tab_1 = table_1()
@@ -43,7 +42,6 @@ def index():
     tab_5 = table_5()
     #Table 6
     tab_6, tab_6_1 = table_6(tab_1, vol)
-    
     
     return render_template('index.html', tab_1=tab_1, f_tune1=f_tune1, f_tune2=f_tune2, 
                            vol1=vol1, vol2=vol2, tab_3=tab_3, tab_4_1=tab_4_1, tab_4_2=tab_4_2,
@@ -108,7 +106,6 @@ def table_2_1():
           "59,1", "61,1", "64,1", "67,1", "69,1", "72,1", "75,1", "79,1",
            "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", 
            "  ", "  ", "  "]
-  
   vol = []
   x = round(random.uniform(1.4, 1.6), 1)
   for i in range(29):
@@ -461,7 +458,6 @@ def table_5():
          f_list.add("{}   {}".format(str(f)+i, lev))
 
   tab = sorted(list(f_list))
-  
   tab_5 = list(map(lambda x: x.split(), tab))
     
   return tab_5
@@ -469,9 +465,7 @@ def table_5():
 
 #Table 6
 def table_6(t1, t2):
-  
   tab_6 = []
-  
   a1 = t1[3]
   a1_1 = float(a1) + 0.1
   #print("    2,7       {0}/{0}      {1}/{1}      {0}/{0}".format(a1, round(a1_1, 1)))
