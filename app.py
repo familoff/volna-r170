@@ -539,7 +539,3 @@ def table_6(t1, t2):
     
     
   return tab_6, tab_6_1
-  
-  
-          
-
