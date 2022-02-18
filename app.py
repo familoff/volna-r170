@@ -537,7 +537,6 @@ def table_6(t1, t2):
   for i in range(len(volumes_1)):
     tab_6_1.append([volumes_1[i], volumes_2[i]])
     
-    
   return tab_6, tab_6_1
 
 
