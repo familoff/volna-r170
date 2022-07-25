@@ -5,6 +5,7 @@ import random
 app = Flask(__name__)
 
 @app.route('/', methods=['POST', 'GET'])
+
 def index():
   tab_1 = [0 for i in range(100)]
   f_tune = ["1,6", "4,5", "8,1", "14,1", "25,1", "31,1", "32,1", 
@@ -82,9 +83,11 @@ def table_1():
   x8 = str(round(random.uniform(-0.3, -0.6), 1))
   tab_1.append(x8)
   #print("'минус (0,6±0,5)'  {0}   {0}".format(x8))
+  global x9 #Исправление
   x9 = str(round(random.uniform(float(x7), float(x7) + 0.4), 1))
   tab_1.append(x9)
   #print("'плюс (10,0±2,5)'      {0}".format(x9))
+  global x10
   x10 = str(round(random.uniform(-0.3, -0.6), 1))
   tab_1.append(x10)
   #print("'минус (0,6±0,5)'      {0}".format(x10))
@@ -463,31 +466,32 @@ def table_5():
   return tab_5
 
 
-#Table 6
+#Table 6 #Исправления
 def table_6(t1, t2):
   tab_6 = []
   a1 = t1[3]
   a1_1 = float(a1) + 0.1
-  #print("    2,7       {0}/{0}      {1}/{1}      {0}/{0}".format(a1, round(a1_1, 1)))
-  tab_6.append(["2,7", a1, round(a1_1, 1)])
+  # print("    2,7       {0}/{0}      {1}/{1}      {0}/{0}".format(a1, round(a1_1, 1)))
+  tab_6.append(["2,7", a1 + " / " + a1, "{0} / {0}".format(round(a1_1, 1))])
+  # tab_6.append(["2,7", a1 + " / " + a1, a1_1])
   a2 = t1[7]
   a2_1 = float(a2) + 0.1
   #print("  10±2,5     {0}/{0}    {1}/{1}    {0}/{0}".format(a2, round(a2_1, 1)))
-  tab_6.append(["10±2,5", a2, round(a2_1, 1)])
+  tab_6.append(["10±2,5", a2 + " / " + a2, "{0} / {0}".format(round(a2_1, 1))])
   a3 = t1[8]
   a3_1 = float(a3) + 0.1
   #print("-0,6±0,5     {0}/{0}    {1}/{1}    {0}/{0}".format(a3, round(a3_1, 1)))
-  tab_6.append(["-0,6±0,5", a3, round(a3_1, 1)])
+  tab_6.append(["-0,6±0,5", a3 + " / " + a3, "{0} / {0}".format(round(a3_1, 1))])
   a4 = t1[11]
   a4_1 = float(a4) + 0.1
   #print("   20±5      {0}/{0}    {1}/{1}    {0}/{0}".format(a4, round(a4_1, 1)))
-  tab_6.append(["20±5", a4, round(a4_1, 1)])
+  tab_6.append(["20±5", a4 + " / " + a4, "{0} / {0}".format(round(a4_1, 1))])
   a5 = t1[12]
   a5_1 = float(a5) + 0.1
   #print("  -20±5     {0}/{0}  {1}/{1}  {0}/{0}".format(a5, round(a5_1, 1)), "\n")
-  tab_6.append(["-20±5", a5, round(a5_1, 1)])
+  tab_6.append(["-20±5", a5 + " / " + a5, "{0} / {0}".format(round(a5_1, 1))])
   
-  tab_6.append([" ", " ", " "])
+  tab_6.append([" \xa0", " \xa0", " \xa0"])
   
   #print("  10±2,5     {0}         {1}         {0}".format(a2, round(a2_1, 1)))
   tab_6.append(["10±2,5", a2, round(a2_1, 1)])
@@ -522,12 +526,11 @@ def table_6(t1, t2):
   #print(" -(20±5)     {0}         {1}         {0}".format(a4, round(a4_1, 1)))
   tab_6.append(["-20±5", a5, round(a5_1, 1)])
   
-  tab_6.append([" ", " ", " "])
+  tab_6.append([" \xa0", " \xa0", " \xa0"])
   
-  #print("  10±2,5     {0}         {1}         {0}".format(a2, round(a2_1, 1)))
-  tab_6.append(["10±2,5", a2, round(a2_1, 1)])
-  #print("-(0,6±0,5)   {0}         {1}         {0}".format(a3, round(a3_1, 1)))
-  tab_6.append(["-(0,6±0,5)", a3, round(a3_1, 1)])
+  #Исправление
+  tab_6.append(["10±2,5", x9, round(float(x9) + 0.1, 1)])
+  tab_6.append(["-(0,6±0,5)", x10, round(float(x10) + 0.1, 1)])
   
   volumes_1 = t2[:29]
   temp_v = list(map(lambda x: x+0.1, volumes_1))
@@ -538,5 +541,3 @@ def table_6(t1, t2):
     tab_6_1.append([volumes_1[i], volumes_2[i]])
     
   return tab_6, tab_6_1
-
-
