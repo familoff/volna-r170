@@ -98,6 +98,17 @@ def table_1():
   tab_1.append(x12)
   #print("'плюс (20,0±5)'    {0} {0}".format(x12))
   
+  #-напряжение на выходе ОПРЧ на частотах:
+  #1,525 МГц
+  x13 = str(round(random.uniform(0.18, 0.29), 2))
+  tab_1.append(x13)
+  #14 МГц
+  x14 = str(round(random.uniform(0.15, 0.35), 2))
+  tab_1.append(x14)
+  #29 МГц
+  x15 = str(round(random.uniform(0.25, 0.85), 2))
+  tab_1.append(x15)
+  
   return tab_1
 
 
