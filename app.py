@@ -501,9 +501,7 @@ def table_6(t1, t2):
   a5_1 = float(a5) + 0.1
   #print("  -20±5     {0}/{0}  {1}/{1}  {0}/{0}".format(a5, round(a5_1, 1)), "\n")
   tab_6.append(["-20±5", a5 + " / " + a5, "{0} / {0}".format(round(a5_1, 1))])
-  
   tab_6.append([" \xa0", " \xa0", " \xa0"])
-  
   #print("  10±2,5     {0}         {1}         {0}".format(a2, round(a2_1, 1)))
   tab_6.append(["10±2,5", a2, round(a2_1, 1)])
   #print("  10±2,5     {0}         {1}         {0}".format(a2, round(a2_1, 1)))
