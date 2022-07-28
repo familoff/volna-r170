@@ -19,15 +19,16 @@ caption {
 	text-align: center;
 }
 
-tr {
+tr, th {
 	text-align: center;
 	vertical-align: center;
 }
-td {vertical-align: middle;}
+td, th {vertical-align: middle;}
 
 br.pageBreak {
     page-break-after: always;
 }
+@media print {header > *:not(main) {display: none;}}
 	</style>
 </head>
    
@@ -193,24 +194,23 @@ br.pageBreak {
                <td>-{{ tab_1[11] }}</td>
                </td>
             </tr>
+			
+			 <tr>
+				<td rowspan="3" class="first" style="b {text-align:right}">
+					<b>Напряжение на выходе ОПРЧ</b>
+				</td>
+               <th rowspan="3"><b>0,04 не менее</b></th>
+               <td>{{ tab_1[13] }}</td>
+            </tr>
+            <tr>
+               <td>{{ tab_1[14] }}</td>
+               </td>
+            </tr>
+            <tr>
+               <td>{{ tab_1[15] }}</td>
+            </tr>
 		</tbody>
 		</table>
-
-
-
-
-
-<!-- Max, make it beautiful=) -->
-<br>
-<div><center>
-<p><b>-напряжение на выходе ОПРЧ на частотах:</b></p>
-<p><b>1,525 МГц</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ tab_1[13] }}</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp; <b>14 МГц</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ tab_1[14] }}</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; <b>9 МГц</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ tab_1[15] }}</p>
-</div></center> 
-<br>
-
-
 
 
   
